@@ -1,0 +1,23 @@
+{
+  "name": "instalist",
+  "version": "0.0.1",
+  "description": "quick marketplace discovery via simple listings",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "run": "nodemon main"
+  },
+  "keywords": [
+    "listings",
+    "classified",
+    "marketplace"
+  ],
+  "author": "iam@adamrobins.com",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "node-logger": "0.0.1"
+  }
+}
