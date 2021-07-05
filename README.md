@@ -68,12 +68,6 @@ You should be presented with :
 Angular project is inside the `client/instalist/src` From here its separated into Services, Components, Models. 
 I will do a further drill down into this, but the structure/method follows vanilla Angular. 
 
-
-## Notes
-
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
-
-
 # Server Install
 
 Much easier than the client. Simply step into the folder 
