@@ -11,7 +11,8 @@ There are 2 sections to the project so far. Both independent of each other, "cli
 # Requirements
 These requirements should be considered compulsory. All versions based on my local dev versions. 
 
- - [GIT](https://git-scm.com/downloads) >=V0.0.1 -- Expected you already have this if here. 
+ - [GIT](https://git-scm.com/downloads) >=V0.0.1 -- Expected you already have this if here.
+ - [Python](https://www.python.org/downloads/) > = 3.9
  - [NodeJS](https://nodejs.org/it/) >= v14.15.4 -- if you need multiple versions per dev machine look into Node Version Manager - Very nice cli tool for switching live node versions. ([nvm](https://github.com/nvm-sh/nvm))
  - [npm](https://nodejs.org/it/) >= 6.14.10 -- (Should come with NodeJS installer)
  - [MongoDB](https://www.mongodb.com/try/download/community) >= db version v4.4.3 -- (community edition is perfect for this project)
@@ -72,20 +73,17 @@ I will do a further drill down into this, but the structure/method follows vanil
 
 Much easier than the client. Simply step into the folder 
 
-`cd /server`
+`cd /py_server`
 
 Then you can run : 
 
-`npm install`
+`pip install -r requirements.txt`
 
-This will add all the required packages. As this time we are working through vanilla NodeJS for our server (for now). 
+This will add all the required packages. As this time we are working through vanilla Python for our server (for now). 
 We can simply run the main service. 
 
-`node main.js`
+`python httpserver.py`
 
-// Or if you have nodemon
-
-`nodemon main.js`
 
 That your server running.
 
