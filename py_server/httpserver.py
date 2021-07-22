@@ -1,7 +1,7 @@
 from http.server import HTTPServer
 
-from py_server.config.web import get_http_config
-from py_server.controllers.index import IndexController
+from config.web import get_http_config
+from controllers.index import IndexController
 
 if __name__ == "__main__":
 	(hostName, serverPort) = get_http_config()
@@ -13,5 +13,4 @@ if __name__ == "__main__":
 	except KeyboardInterrupt:
 		pass
 
-	webServer.server_close()
-	print("Server stopped.")
+	webServer.server_close()	print("Server stopped.")
