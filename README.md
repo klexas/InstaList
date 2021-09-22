@@ -1,5 +1,5 @@
 
-# InstaList
+# InstaList (Refers to Typscript Branch - Update in progress)
 ## Directory listings made quick & easy 
 
 [TODO]: Build Status & Test Status
