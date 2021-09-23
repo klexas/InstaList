@@ -2,17 +2,22 @@ import os
 from http.server import BaseHTTPRequestHandler
 from pathlib import Path
 
-from config.routes import MY_ROUTER
+from routes.home import MY_ROUTER
 from config.web import PROJECT_ROOT
 
 
 class ReqHandler(BaseHTTPRequestHandler):
 
-	def get_asset(self, asset):
+	# If you want to get assets, use the working dir. 
+	# Some sanitization on the `asset` would be nice.
+	# also seems this should be private 
+	def __get_asset(self, asset):
 		view_file = os.path.join(os.getcwd(), 'view/assets' + asset)
 		view = Path(view_file).read_bytes()
 		return view
 
+
+	#default is public - this is cool
 	def do_GET(self):
 		self.send_response(200)
 		if self.path.endswith(".html") or self.path.endswith("/"):
@@ -23,4 +28,5 @@ class ReqHandler(BaseHTTPRequestHandler):
 			return
 
 		self.end_headers()
-		self.wfile.write(self.get_asset(self.path))
+		# calling an internal method, this get_asset should be private
+		self.wfile.write(self.__get_asset(self.path))

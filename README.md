@@ -73,7 +73,7 @@ I will do a further drill down into this, but the structure/method follows vanil
 
 Much easier than the client. Simply step into the folder 
 
-`cd /py_server`
+`cd /`
 
 Then you can run : 
 
