@@ -2,14 +2,14 @@ import os
 from http.server import BaseHTTPRequestHandler
 from pathlib import Path
 
-from py_server.config.routes import MY_ROUTER
-from py_server.config.web import PROJECT_ROOT
+from config.routes import MY_ROUTER
+from config.web import PROJECT_ROOT
 
 
 class ReqHandler(BaseHTTPRequestHandler):
 
 	def get_asset(self, asset):
-		view_file = os.path.join(PROJECT_ROOT, 'py_server/view/assets' + asset)
+		view_file = os.path.join(os.getcwd(), 'view/assets' + asset)
 		view = Path(view_file).read_bytes()
 		return view
 

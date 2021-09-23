@@ -6,7 +6,7 @@ PROJECT_ROOT = pathlib.Path(__file__).parent.parent.parent
 
 
 def get_http_config():
-	config_file = os.path.join(PROJECT_ROOT, 'py_server/config/settings.json')
+	config_file = os.path.join(os.getcwd(), 'config/settings.json')
 	with open(config_file) as f:
 		settings = json.load(f)
 		server = settings["hostname"]

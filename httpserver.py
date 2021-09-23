@@ -1,7 +1,7 @@
 from http.server import HTTPServer
 
-from py_server.config.web import get_http_config
-from py_server.reqhandler import ReqHandler
+from config.web import get_http_config
+from reqhandler import ReqHandler
 
 if __name__ == "__main__":
 	(hostName, serverPort) = get_http_config()

@@ -1,5 +1,5 @@
-from py_server.controllers.index import IndexController
-from py_server.controllers.notfound import NotFoundController
+from controllers.index import IndexController
+from controllers.notfound import NotFoundController
 
 
 class MyRouter:

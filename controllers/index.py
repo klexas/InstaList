@@ -1,13 +1,15 @@
 import os
 from pathlib import Path
 
-from py_server.config.web import PROJECT_ROOT
+from config.web import PROJECT_ROOT
 
 
 class IndexController:
 
 	def get_view(self):
-		view_file = os.path.join(PROJECT_ROOT, 'py_server/view/index.html')
+		# Use the working directory, not project root
+		# Using project root assumes too many hard coded relative paths from 'dev' root 
+		view_file = os.path.join(os.getcwd(), 'view/index.html')
 		view = Path(view_file).read_bytes()
 		return view
 
